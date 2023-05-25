@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handlebars Demo</title>
+
+    <style>
+        table, th, td {
+          border: 1px solid;
+          
+        }
+        th, td{
+            padding: 8px;
+        }
+
+        .give-somecolor{
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body class="give-somecolor">
+    <h1>{{title}}</h1>
+    <p>{{fruits}}</p>
+
+    <h2>Fruit Sales</h2>
+    
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Week day</th>
+                    <th>Apple sales</th>
+                    <th>Orange sales</th>
+                </tr>
+            </thead>
+            {{#each fruitSales}}
+            <tr>
+                <td>{{day}}</td>
+                <td>{{apples}}</td>
+                <td>{{oranges}}</td>
+            </tr>
+            {{/each}}
+            <table>
+    </div>
+
+    <div>
+        <p>Hello my name is {{name}} and my surname is {{surname}}</p>
+        <p>I love and enjoy {{course}}</p>
+    </div>
+</body>
+</html>
